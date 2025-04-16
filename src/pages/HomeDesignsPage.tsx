@@ -1,73 +1,66 @@
-import React from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, Button, Container, Card, CardContent, CardMedia, Grid, Modal, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import HomeModelCard from '../components/HomeModelCard';
 import { Link as RouterLink } from 'react-router-dom';
 
-// Sample floor plan data
-const homeModels = [
+// Import preview images for each home design
+import arlingtonPreview from '../assets/images/Valerie Pic/FloorPlans/Outside_2021.jpg';
+
+// Home design data
+const homeDesigns = [
   {
-    id: 1,
+    id: 'arlington',
     name: 'The Arlington',
-    description: 'A spacious colonial with elegant finishes and a flowing floor plan perfect for entertaining. Features a first-floor primary suite and expansive kitchen opening to a great room.',
-    imageUrl: 'https://images.unsplash.com/photo-1602941525421-8f8b81d3edbb?ixlib=rb-4.0.3',
+    sqFt: '3,800',
     bedrooms: 4,
     bathrooms: 3.5,
-    squareFeet: 3200,
-    features: ['Walk-out basement', 'Covered patio', 'Three-car garage', 'Home office'],
-    price: 'Starting at $1.2M',
+    description: 'A luxurious estate home featuring elegant design, premium finishes, and thoughtful spaces for modern living.',
+    previewImage: arlingtonPreview,
+    path: '/home-designs/arlington'
   },
   {
-    id: 2,
-    name: 'The Belmont',
-    description: 'A stately modern farmhouse design with luxury appointments throughout. Featuring high ceilings, an open concept layout, and designer kitchen with premium appliances.',
-    imageUrl: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3',
-    bedrooms: 5,
-    bathrooms: 4.5,
-    squareFeet: 3800,
-    features: ['Guest suite', 'Media room', 'Custom millwork', 'Butler\'s pantry'],
-    price: 'Starting at $1.4M',
-  },
-  {
-    id: 3,
+    id: 'cambridge',
     name: 'The Cambridge',
-    description: 'A sophisticated transitional design with traditional elements and modern amenities. This model features a dramatic two-story foyer and open living spaces.',
-    imageUrl: 'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?ixlib=rb-4.0.3',
-    bedrooms: 4,
-    bathrooms: 3.5,
-    squareFeet: 3400,
-    features: ['First-floor office', 'Mudroom', 'Gourmet kitchen', 'Smart home technology'],
-    price: 'Starting at $1.3M',
-  },
-  {
-    id: 4,
-    name: 'The Dartmouth',
-    description: 'Our largest model offering expansive living areas and luxury features. Perfect for families desiring space and privacy, with versatile bonus rooms and entertainment areas.',
-    imageUrl: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3',
-    bedrooms: 5,
-    bathrooms: 5.5,
-    squareFeet: 4500,
-    features: ['Wine cellar', 'Home gym', 'Theater room', 'Multi-generational suite'],
-    price: 'Starting at $1.7M',
-  },
-  {
-    id: 5,
-    name: 'The Essex',
-    description: 'A stunning ranch design with luxury in every detail. All main living areas on one level with an emphasis on indoor/outdoor living and entertaining spaces.',
-    imageUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3',
+    sqFt: '3,200',
     bedrooms: 3,
     bathrooms: 2.5,
-    squareFeet: 2800,
-    features: ['Open concept', 'Vaulted ceilings', 'Covered lanai', 'Chef\'s kitchen'],
-    price: 'Starting at $1.1M',
+    description: 'A sophisticated family home with an open floor plan, gourmet kitchen, and spacious primary suite.',
+    previewImage: arlingtonPreview, // Placeholder - replace with actual image
+    path: '/home-designs/cambridge'
   },
+  {
+    id: 'westchester',
+    name: 'The Westchester',
+    sqFt: '4,100',
+    bedrooms: 5,
+    bathrooms: 4,
+    description: 'An expansive estate home with luxury amenities including a home theater, wine cellar, and outdoor living space.',
+    previewImage: arlingtonPreview, // Placeholder - replace with actual image
+    path: '/home-designs/westchester'
+  }
 ];
 
 const HomeDesignsPage: React.FC = () => {
-  const handleModelClick = (id: number) => {
-    console.log(`Model ${id} clicked`);
-    // In a real app, this would navigate to a detailed view of the home model
+  // Function to scroll to top before navigation
+  const handleViewDetails = () => {
+    window.scrollTo(0, 0);
+  };
+
+  // State for image modal
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+
+  // Handle opening the modal with the clicked image
+  const handleImageClick = (image: string) => {
+    setSelectedImage(image);
+    setOpenModal(true);
+  };
+
+  // Handle closing the modal
+  const handleCloseModal = () => {
+    setOpenModal(false);
   };
 
   return (
@@ -86,50 +79,112 @@ const HomeDesignsPage: React.FC = () => {
             gutterBottom
             sx={{ fontFamily: '"Playfair Display", serif' }}
           >
-            Home Designs & Floor Plans
+            Our Home Designs
           </Typography>
           <Typography variant="h6" sx={{ maxWidth: '800px', mb: 4 }}>
-            Discover our collection of thoughtfully designed luxury homes, each crafted with exceptional attention to detail and premium finishes.
+            Discover our collection of thoughtfully designed luxury homes, each offering a perfect blend of elegance and functionality.
           </Typography>
         </Container>
       </Box>
 
       <Section
-        title="Available Models"
-        subtitle="Explore our selection of elegant home designs available at Brittany Estates"
+        title="Available Home Designs"
+        subtitle="Explore our selection of luxury estate homes"
       >
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="body1" paragraph>
-            Each Brittany Estates home is designed with an emphasis on quality craftsmanship, elegant aesthetics, and practical functionality. Our models can be customized to suit your specific needs and preferences, with various options for finishes, layouts, and premium features.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Work with our design team to create the perfect living space for your lifestyle. From traditional to contemporary, our flexible designs can be tailored to reflect your personal style while maintaining the distinctive character of Brittany Estates.
-          </Typography>
-        </Box>
-
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          {homeModels.map((model) => (
-            <HomeModelCard
-              key={model.id}
-              name={model.name}
-              description={model.description}
-              imageUrl={model.imageUrl}
-              bedrooms={model.bedrooms}
-              bathrooms={model.bathrooms}
-              squareFeet={model.squareFeet}
-              features={model.features}
-              price={model.price}
-              onClick={() => handleModelClick(model.id)}
-            />
+        <Box sx={{ my: 4 }}>
+          {homeDesigns.map((design) => (
+            <Card 
+              key={design.id} 
+              sx={{ 
+                display: 'flex', 
+                flexDirection: { xs: 'column', md: 'row' },
+                mb: 4,
+                overflow: 'hidden'
+              }}
+            >
+              <CardMedia
+                component="img"
+                sx={{ 
+                  width: { xs: '100%', md: '40%' },
+                  height: { xs: 240, md: 'auto' },
+                  objectFit: 'cover',
+                  cursor: 'pointer'
+                }}
+                image={design.previewImage}
+                alt={design.name}
+                onClick={() => handleImageClick(design.previewImage)}
+              />
+              <CardContent sx={{ 
+                display: 'flex', 
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                width: { xs: '100%', md: '60%' },
+                p: 4
+              }}>
+                <Box>
+                  <Typography 
+                    variant="h4" 
+                    component="h2" 
+                    gutterBottom
+                    sx={{ fontFamily: '"Playfair Display", serif' }}
+                  >
+                    {design.name}
+                  </Typography>
+                  
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 3 }}>
+                    <Typography variant="body1" sx={{ mr: 3 }}>
+                      <strong>{design.sqFt}</strong> sq ft
+                    </Typography>
+                    <Typography variant="body1" sx={{ mr: 3 }}>
+                      <strong>{design.bedrooms}</strong> Bedrooms
+                    </Typography>
+                    <Typography variant="body1">
+                      <strong>{design.bathrooms}</strong> Bathrooms
+                    </Typography>
+                  </Box>
+                  
+                  <Typography variant="body1" paragraph>
+                    {design.description}
+                  </Typography>
+                </Box>
+                
+                <Box sx={{ mt: 2 }}>
+                  <Button
+                    component={RouterLink}
+                    to={design.path}
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    onClick={handleViewDetails}
+                  >
+                    View Details
+                  </Button>
+                </Box>
+              </CardContent>
+            </Card>
           ))}
         </Box>
+      </Section>
 
-        <Box sx={{ textAlign: 'center', mt: 8, p: 4, bgcolor: 'background.paper', borderRadius: 2 }}>
-          <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
-            Interested in Custom Options?
+      <Section
+        title="Custom Home Options"
+        subtitle="Work with our team to create your dream home"
+      >
+        <Box sx={{ 
+          p: 4, 
+          borderRadius: 2,
+          textAlign: 'center',
+          bgcolor: 'background.paper',
+          maxWidth: 800,
+          mx: 'auto',
+          mt: 2,
+          mb: 6
+        }}>
+          <Typography variant="h5" gutterBottom sx={{ mb: 2 }}>
+            Don't see exactly what you're looking for?
           </Typography>
           <Typography variant="body1" paragraph>
-            Our team can work with you to create a fully customized home design tailored to your specific needs and preferences.
+            Our design team can work with you to customize any of our home designs or create a completely custom home tailored to your specific needs and preferences.
           </Typography>
           <Button
             component={RouterLink}
@@ -138,10 +193,56 @@ const HomeDesignsPage: React.FC = () => {
             color="primary"
             size="large"
           >
-            Contact Our Design Team
+            Schedule a Consultation
           </Button>
         </Box>
       </Section>
+
+      {/* Image Viewer Modal */}
+      <Modal
+        open={openModal}
+        onClose={handleCloseModal}
+        aria-labelledby="floor-plan-modal"
+        aria-describedby="floor-plan-image-viewer"
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          p: 2
+        }}
+      >
+        <Box sx={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh', bgcolor: 'background.paper', borderRadius: 2 }}>
+          <IconButton
+            onClick={handleCloseModal}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: 'white',
+              bgcolor: 'rgba(0,0,0,0.4)',
+              '&:hover': {
+                bgcolor: 'rgba(0,0,0,0.6)',
+              },
+              zIndex: 1,
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+
+          <Box
+            component="img"
+            src={selectedImage}
+            alt="Floor Plan"
+            sx={{
+              maxWidth: '100%',
+              maxHeight: '90vh',
+              objectFit: 'contain',
+              display: 'block',
+              borderRadius: 2,
+            }}
+          />
+        </Box>
+      </Modal>
     </Layout>
   );
 };

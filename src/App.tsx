@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import './App.css';
@@ -14,6 +14,18 @@ import TestimonialsPage from './pages/TestimonialsPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import FaqPage from './pages/FaqPage';
+import ArlingtonHomePage from './pages/homeDesigns/ArlingtonHomePage';
+
+// ScrollToTop wrapper component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+}
 
 // Create theme
 const theme = createTheme({
@@ -41,11 +53,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/community" element={<CommunityPage />} />
           <Route path="/home-designs" element={<HomeDesignsPage />} />
+          <Route path="/home-designs/arlington" element={<ArlingtonHomePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/blog" element={<BlogPage />} />

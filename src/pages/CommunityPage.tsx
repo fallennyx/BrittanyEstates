@@ -29,6 +29,7 @@ import dockImage from '../assets/images/Valerie Pic/CommunityFeatures/Northort D
 import gazeboImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport village park gazebo.jpg';
 import yachtClubImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport-Yacht-Club.jpg';
 import hotelImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport Hotel.jpg';
+import northportpark from '../assets/images/Valerie Pic/CommunityFeatures/villagepark.jpg';
 
 const CommunityPage: React.FC = () => {
   return (
@@ -37,7 +38,7 @@ const CommunityPage: React.FC = () => {
         sx={{
           position: 'relative',
           height: '60vh',
-          backgroundImage: `url(${communityImage})`,
+          backgroundImage: `url(${northportpark})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',
