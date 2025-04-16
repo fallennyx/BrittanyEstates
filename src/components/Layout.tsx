@@ -8,15 +8,12 @@ import {
   Divider, 
   Drawer, 
   IconButton, 
-  Link, 
   List, 
   ListItem, 
   ListItemButton, 
   ListItemText, 
   Toolbar, 
-  Typography,
-  useMediaQuery,
-  useTheme
+  Typography
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -41,8 +38,6 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const location = useLocation();
 
   const handleDrawerToggle = () => {

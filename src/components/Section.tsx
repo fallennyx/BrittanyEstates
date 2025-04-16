@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Divider, useTheme } from '@mui/material';
+import { Box, Container, Typography, Divider } from '@mui/material';
 
 interface SectionProps {
   title: string;
@@ -22,8 +22,6 @@ const Section: React.FC<SectionProps> = ({
   py = 6,
   id,
 }) => {
-  const theme = useTheme();
-
   return (
     <Box 
       component="section" 
