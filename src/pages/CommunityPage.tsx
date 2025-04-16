@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, Card, CardMedia, CardContent, Button } from '@mui/material';
+import { Box, Typography, Container, Card, CardMedia, CardContent, Button, Grid, Divider } from '@mui/material';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import FeatureCard from '../components/FeatureCard';
@@ -14,12 +14,23 @@ import SchoolIcon from '@mui/icons-material/School';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import GolfCourseIcon from '@mui/icons-material/GolfCourse';
+import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
+import LocalBarIcon from '@mui/icons-material/LocalBar';
 
-// Placeholder images - in a real project, you would use actual images from your assets
-const communityImage = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3';
-const mapImage = 'https://images.unsplash.com/photo-1569336415962-a4bd9f69c07b?ixlib=rb-4.0.3';
-const beachImage = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3';
-const parksImage = 'https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-4.0.3';
+// Import actual images from assets
+import communityImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport village park -.jpg';
+import beachImage from '../assets/images/Valerie Pic/CommunityFeatures/crabmeadowbeach.jpg';
+import parksImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport Park Playground.jpg';
+import harborImage from '../assets/images/Valerie Pic/CommunityFeatures/Nothport Harbor.jpg';
+import villageImage from '../assets/images/Valerie Pic/CommunityFeatures/northport_village_sign.webp';
+import golfImage from '../assets/images/Valerie Pic/CommunityFeatures/Golf Course.jpg';
+import theaterImage from '../assets/images/Valerie Pic/CommunityFeatures/John Engemen theater.jpg';
+import restaurantImage from '../assets/images/Valerie Pic/CommunityFeatures/Main Street Cafe- Northport Restaurant.jpg';
+import shopsImage from '../assets/images/Valerie Pic/CommunityFeatures/Nothport Village shops.jpg';
+import dockImage from '../assets/images/Valerie Pic/CommunityFeatures/Northort Dock.jpeg';
+import gazeboImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport village park gazebo.jpg';
+import yachtClubImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport-Yacht-Club.jpg';
+import hotelImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport Hotel.jpg';
 
 const CommunityPage: React.FC = () => {
   return (
@@ -27,7 +38,7 @@ const CommunityPage: React.FC = () => {
       <Box
         sx={{
           position: 'relative',
-          height: '50vh',
+          height: '60vh',
           backgroundImage: `url(${communityImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -150,7 +161,7 @@ const CommunityPage: React.FC = () => {
                 Beaches & Waterfront
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Brittany Estates is located just minutes from beautiful Long Island beaches and the picturesque Northport Harbor. Enjoy swimming, boating, fishing, and stunning sunsets along the shoreline.
+                Brittany Estates is located just minutes from beautiful Long Island beaches and the picturesque Northport Harbor. Enjoy swimming, boating, fishing, and stunning sunsets along the shoreline. Crab Meadow Beach is one of the area's most beautiful natural attractions.
               </Typography>
             </CardContent>
           </Card>
@@ -167,11 +178,219 @@ const CommunityPage: React.FC = () => {
                 Parks & Recreation
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Explore numerous parks, preserves, and recreational facilities nearby. From hiking trails to playgrounds and sports fields, the area offers activities for all ages and interests.
+                Explore numerous parks, preserves, and recreational facilities nearby. From hiking trails to playgrounds and sports fields, the area offers activities for all ages and interests. Northport Park features beautiful playgrounds, walking paths, and waterfront views.
               </Typography>
             </CardContent>
           </Card>
         </Box>
+
+        <Section
+          title="Outdoor Activities"
+          subtitle="Enjoy the natural beauty of Northport"
+        >
+          <div className="community-grid-container" style={{ display: 'flex', flexWrap: 'wrap', width: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={harborImage}
+                  alt="Northport Harbor"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Northport Harbor
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    The picturesque Northport Harbor offers spectacular water views, sailing opportunities, and seasonal events. Take leisurely walks along the harbor, watch boats coming in and out, or enjoy seasonal festivals along the waterfront.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={dockImage}
+                  alt="Northport Dock"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Northport Dock
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    The Northport Dock is a central hub for maritime activities. It's perfect for fishing, enjoying sunsets, or simply watching the boats. During summer months, you can enjoy concerts and community events at this lively location.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={gazeboImage}
+                  alt="Village Park Gazebo"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Northport Village Park
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    The iconic gazebo at Northport Village Park hosts summer concerts and provides a charming spot for relaxation. The park offers beautiful green spaces, perfect for picnics and family gatherings, with stunning views of the harbor.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={golfImage}
+                  alt="Golf Course"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Golf Courses
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Northport is home to exceptional golf courses, including the Crab Meadow Golf Course, offering challenging play for golfers of all skill levels with scenic views of the Long Island Sound. The Northport Golf Club provides a welcoming environment for both seasoned players and beginners.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+          </div>
+        </Section>
+
+        <Divider sx={{ my: 6 }} />
+
+        <Section
+          title="Shopping & Dining"
+          subtitle="Discover Northport's charming retail and culinary experiences"
+        >
+          <div className="community-grid-container" style={{ display: 'flex', flexWrap: 'wrap', width: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={shopsImage}
+                  alt="Northport Village Shops"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Village Shops
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Northport Village features a variety of boutique shops offering everything from clothing and home décor to specialty foods and gifts. The charming Main Street is perfect for leisurely shopping, with its historic buildings and unique storefronts.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={restaurantImage}
+                  alt="Northport Restaurant"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Fine Dining
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Northport is known for its excellent dining scene, with many top-rated restaurants offering everything from casual waterfront dining to upscale cuisine. Local favorites include Robke's, Maroni Cuisine, and Skipper's Pub, serving fresh seafood and other local specialties.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={hotelImage}
+                  alt="Northport Hotel"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Northport Hotel
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    The historic Northport Hotel adds charm to the village center and houses dining options for visitors and residents alike. Its location in the heart of town makes it a convenient starting point for exploring Northport's shopping and dining scene.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={theaterImage}
+                  alt="John Engeman Theater"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Entertainment
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    The John W. Engeman Theater offers Broadway-quality productions right in the heart of Northport. This historic venue features musicals, plays, and special events throughout the year, making it a cultural centerpiece of the community.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+          </div>
+        </Section>
+
+        <Divider sx={{ my: 6 }} />
+
+        <Section
+          title="Nautical Lifestyle"
+          subtitle="Embrace the waterfront lifestyle in Northport"
+        >
+          <div className="community-grid-container" style={{ display: 'flex', flexWrap: 'wrap', width: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={yachtClubImage}
+                  alt="Northport Yacht Club"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Northport Yacht Club
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    The Northport Yacht Club is a premier destination for boating enthusiasts. Established in 1883, this historic club offers sailing programs, races, and social events in a beautiful waterfront setting. Members enjoy exceptional facilities and a vibrant community of fellow boaters.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={villageImage}
+                  alt="Northport Village Sign"
+                />
+                <CardContent>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                    Historic Northport
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Incorporated in 1894, Northport Village maintains its historic charm while offering modern amenities. The village's rich maritime history is evident in its architecture and waterfront design, creating a timeless atmosphere that residents and visitors cherish.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+          </div>
+        </Section>
 
         <Box sx={{ textAlign: 'center', mt: 8 }}>
           <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
