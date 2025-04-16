@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Typography, Link, Paper } from '@mui/material';
+import { Box, Typography, Link, Paper } from '@mui/material';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import ContactForm from '../components/ContactForm';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, Card, CardMedia, CardContent, Button, Grid, Divider } from '@mui/material';
+import { Box, Typography, Container, Card, CardMedia, CardContent, Button, Divider } from '@mui/material';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import FeatureCard from '../components/FeatureCard';
@@ -14,8 +14,6 @@ import SchoolIcon from '@mui/icons-material/School';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import GolfCourseIcon from '@mui/icons-material/GolfCourse';
-import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
-import LocalBarIcon from '@mui/icons-material/LocalBar';
 
 // Import actual images from assets
 import communityImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport village park -.jpg';
