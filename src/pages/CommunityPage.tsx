@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Typography, Container, Card, CardMedia, CardContent, Button, Divider } from '@mui/material';
+import {Box, Button, Card, CardContent, CardMedia, Container, Divider, Typography} from '@mui/material';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import FeatureCard from '../components/FeatureCard';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 
 // Import icons for features
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
@@ -16,7 +16,7 @@ import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import GolfCourseIcon from '@mui/icons-material/GolfCourse';
 
 // Import actual images from assets
-import communityImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport village park -.jpg';
+
 import beachImage from '../assets/images/Valerie Pic/CommunityFeatures/crabmeadowbeach.jpg';
 import parksImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport Park Playground.jpg';
 import harborImage from '../assets/images/Valerie Pic/CommunityFeatures/Nothport Harbor.jpg';
