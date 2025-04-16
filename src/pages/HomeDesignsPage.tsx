@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { Box, Typography, Button, Container, Card, CardContent, CardMedia, Grid, Modal, IconButton } from '@mui/material';
+import React, {useState} from 'react';
+import {Box, Button, Card, CardContent, CardMedia, Container, IconButton, Modal, Typography} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 
 // Import preview images for each home design
 import arlingtonPreview from '../assets/images/Valerie Pic/FloorPlans/Outside_2021.jpg';
+
 
 // Home design data
 const homeDesigns = [
