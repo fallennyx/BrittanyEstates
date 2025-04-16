@@ -2,21 +2,9 @@ import React from 'react';
 import {Box, Button, Card, CardContent, CardMedia, Container, Divider, Typography} from '@mui/material';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
-import FeatureCard from '../components/FeatureCard';
 import {Link as RouterLink} from 'react-router-dom';
 
-// Import icons for features
-import BeachAccessIcon from '@mui/icons-material/BeachAccess';
-import DirectionsBoatIcon from '@mui/icons-material/DirectionsBoat';
-import LocalMallIcon from '@mui/icons-material/LocalMall';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
-import SchoolIcon from '@mui/icons-material/School';
-import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import GolfCourseIcon from '@mui/icons-material/GolfCourse';
-
 // Import actual images from assets
-
 import beachImage from '../assets/images/Valerie Pic/CommunityFeatures/crabmeadowbeach.jpg';
 import parksImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport Park Playground.jpg';
 import harborImage from '../assets/images/Valerie Pic/CommunityFeatures/Nothport Harbor.jpg';
@@ -63,7 +51,7 @@ const CommunityPage: React.FC = () => {
               gutterBottom
               sx={{ fontFamily: '"Playfair Display", serif' }}
             >
-              Our Community
+              The Community
             </Typography>
             <Typography variant="h6">
               Experience the perfect balance of tranquility and convenience in the heart of Northport, Long Island
@@ -85,68 +73,6 @@ const CommunityPage: React.FC = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mb: 8 }}>
-          <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(25% - 18px)' } }}>
-            <FeatureCard
-              title="Beautiful Beaches"
-              description="Enjoy proximity to Long Island's finest beaches, just minutes from your doorstep."
-              icon={<BeachAccessIcon />}
-            />
-          </Box>
-          <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(25% - 18px)' } }}>
-            <FeatureCard
-              title="Waterfront Activities"
-              description="Experience boating, fishing, and water sports in Northport Harbor and the Long Island Sound."
-              icon={<DirectionsBoatIcon />}
-            />
-          </Box>
-          <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(25% - 18px)' } }}>
-            <FeatureCard
-              title="Shopping & Dining"
-              description="Explore charming boutiques, gourmet markets, and exceptional restaurants nearby."
-              icon={<LocalMallIcon />}
-            />
-          </Box>
-          <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(25% - 18px)' } }}>
-            <FeatureCard
-              title="Fine Dining"
-              description="Savor culinary delights at Northport's renowned restaurants and cafes."
-              icon={<RestaurantIcon />}
-            />
-          </Box>
-        </Box>
-
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mb: 8 }}>
-          <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(25% - 18px)' } }}>
-            <FeatureCard
-              title="Top Schools"
-              description="Access to highly-rated Northport-East Northport School District."
-              icon={<SchoolIcon />}
-            />
-          </Box>
-          <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(25% - 18px)' } }}>
-            <FeatureCard
-              title="Walking Trails"
-              description="Enjoy scenic walking and biking paths throughout the community and nearby parks."
-              icon={<DirectionsRunIcon />}
-            />
-          </Box>
-          <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(25% - 18px)' } }}>
-            <FeatureCard
-              title="Medical Facilities"
-              description="Premier healthcare facilities nearby, including Huntington Hospital."
-              icon={<LocalHospitalIcon />}
-            />
-          </Box>
-          <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(25% - 18px)' } }}>
-            <FeatureCard
-              title="Golf Courses"
-              description="Multiple prestigious golf courses within a short drive."
-              icon={<GolfCourseIcon />}
-            />
-          </Box>
-        </Box>
-
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 6 }}>
           <Card sx={{ flex: 1 }}>
             <CardMedia
@@ -157,9 +83,12 @@ const CommunityPage: React.FC = () => {
             />
             <CardContent>
               <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
-                Beaches & Waterfront
+                Parks, Recreation & Beaches
               </Typography>
               <Typography variant="body2" color="text.secondary">
+                Explore numerous parks, preserves, and recreational facilities nearby. From hiking trails to playgrounds and sports fields, the area offers activities for all ages and interests. Northport Park features beautiful playgrounds, walking paths, and waterfront views.
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
                 Brittany Estates is located just minutes from beautiful Long Island beaches and the picturesque Northport Harbor. Enjoy swimming, boating, fishing, and stunning sunsets along the shoreline. Crab Meadow Beach is one of the area's most beautiful natural attractions.
               </Typography>
             </CardContent>
@@ -174,10 +103,10 @@ const CommunityPage: React.FC = () => {
             />
             <CardContent>
               <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
-                Parks & Recreation
+                Community Activities
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Explore numerous parks, preserves, and recreational facilities nearby. From hiking trails to playgrounds and sports fields, the area offers activities for all ages and interests. Northport Park features beautiful playgrounds, walking paths, and waterfront views.
+                Northport offers a vibrant community life with seasonal events, farmers markets, summer concerts, and outdoor activities throughout the year. The village hosts numerous festivals celebrating music, arts, and the area's rich maritime heritage, providing endless opportunities to connect with neighbors and immerse yourself in the local culture.
               </Typography>
             </CardContent>
           </Card>
