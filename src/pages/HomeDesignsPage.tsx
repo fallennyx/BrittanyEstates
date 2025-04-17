@@ -8,7 +8,6 @@ import {Link as RouterLink} from 'react-router-dom';
 // Import preview images for each home design
 import arlingtonPreview from '../assets/images/Valerie Pic/FloorPlans/Outside_2021.jpg';
 
-
 // Home design data
 const homeDesigns = [
   {
@@ -40,6 +39,16 @@ const homeDesigns = [
     description: 'An expansive estate home with luxury amenities including a home theater, wine cellar, and outdoor living space.',
     previewImage: arlingtonPreview, // Placeholder - replace with actual image
     path: '/home-designs/westchester'
+  },
+  {
+    id: 'the-country',
+    name: 'The Country',
+    sqFt: '3,400',
+    bedrooms: 5,
+    bathrooms: 3,
+    description: 'A luxurious estate home with spacious living areas, premium finishes, and a beautifully landscaped property.',
+    previewImage: arlingtonPreview, // Placeholder - replace with actual image
+    path: '/home-designs/thecountry'
   }
 ];
 

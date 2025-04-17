@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React, {useEffect} from 'react';
+import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import './App.css';
 
@@ -15,6 +15,7 @@ import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import FaqPage from './pages/FaqPage';
 import ArlingtonHomePage from './pages/homeDesigns/ArlingtonHomePage';
+import TheCountryPage from './pages/homeDesigns/TheCountry';
 
 // ScrollToTop wrapper component
 function ScrollToTop() {
@@ -60,6 +61,7 @@ function App() {
           <Route path="/community" element={<CommunityPage />} />
           <Route path="/home-designs" element={<HomeDesignsPage />} />
           <Route path="/home-designs/arlington" element={<ArlingtonHomePage />} />
+          <Route path="/home-designs/thecountry" element={<TheCountryPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/blog" element={<BlogPage />} />
