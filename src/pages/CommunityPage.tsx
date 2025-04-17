@@ -49,40 +49,118 @@ const CommunityPage: React.FC = () => {
               variant="h2"
               component="h1"
               gutterBottom
-              sx={{ fontFamily: '"Playfair Display", serif' }}
+              sx={{ fontFamily: '"Playfair Display", serif', fontWeight: 'bold' }}
             >
-              The Community
+              Looking to buy a home in Northport, NY?
             </Typography>
             <Typography variant="h6">
-              Experience the perfect balance of tranquility and convenience in the heart of Northport, Long Island
+              Discover Waterfront Living on Long Island
             </Typography>
           </Box>
         </Container>
+      </Box>
+
+      <Box sx={{ mb: 6, mt: 4, px: { xs: 2, sm: 0 } }}>
+        <Typography variant="body1" paragraph sx={{ textAlign: 'center', maxWidth: '800px', mx: 'auto', mb: 2, color: 'text.secondary' }}>
+          This charming waterfront village on Long Island's North Shore offers the perfect mix of coastal beauty, small-town charm, and modern convenience. Northport is a sought-after location for homebuyers looking for a peaceful lifestyle with easy access to New York City.
+        </Typography>
+        <Typography variant="h5" paragraph sx={{ fontWeight: 'bold', textAlign: 'center', mt: 4, mb: 4 }}>
+          Why Buy a Home in Northport?
+        </Typography>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: '800px', mx: 'auto', mb: 2 }}>
+          <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 'bold', mb: { xs: 1, sm: 0 } }}>
+            Scenic Waterfront Living
+          </Typography>
+          <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+            Enjoy stunning views of Northport Harbor, access to beaches, marinas, and outdoor activities like boating, kayaking, and hiking.
+          </Typography>
+        </Box>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: '800px', mx: 'auto', mb: 2 }}>
+          <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 'bold', mb: { xs: 1, sm: 0 } }}>
+            Historic Village Charm
+          </Typography>
+          <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+            Stroll down Main Street with its boutique shops, cafes, and fine dining options such as Maroni Cuisine and Arlo Kitchen & Bar.
+          </Typography>
+        </Box>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: '800px', mx: 'auto', mb: 2 }}>
+          <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 'bold', mb: { xs: 1, sm: 0 } }}>
+            Top-Rated Schools
+          </Typography>
+          <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+            The Northport-East Northport School District is a major draw for families seeking quality education.
+          </Typography>
+        </Box>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: '800px', mx: 'auto', mb: 2 }}>
+          <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 'bold', mb: { xs: 1, sm: 0 } }}>
+            Commuter-Friendly
+          </Typography>
+          <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+            Convenient access to the Long Island Rail Road (LIRR) and major highways makes commuting to NYC easy.
+          </Typography>
+        </Box>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: '800px', mx: 'auto', mb: 2 }}>
+          <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 'bold', mb: { xs: 1, sm: 0 } }}>
+            Strong Community & Events
+          </Typography>
+          <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+            Farmers markets, outdoor concerts, and seasonal festivals create a vibrant and welcoming atmosphere for residents of all ages.
+          </Typography>
+        </Box>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: '800px', mx: 'auto', mb: 2 }}>
+          <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 'bold', mb: { xs: 1, sm: 0 } }}>
+            Pet-Friendly & Family-Oriented
+          </Typography>
+          <Typography variant="body1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
+            With dog-friendly parks and kid-friendly spaces, Northport is ideal for growing families and animal lovers alike.
+          </Typography>
+        </Box>
+        
+        <Typography variant="body1" paragraph sx={{ textAlign: 'center', maxWidth: '800px', mx: 'auto', mb: 2, color: 'text.secondary' }}>
+          Start your home search in Northport, NY today and discover why so many buyers are choosing this beautiful Long Island village as their forever home.
+        </Typography>
       </Box>
 
       <Section
         title="Location & Amenities"
         subtitle="Discover all that Brittany Estates and the surrounding area has to offer"
       >
-        <Box sx={{ mb: 6 }}>
-          <Typography variant="body1" paragraph>
-            Brittany Estates is nestled in the picturesque town of Northport, Long Island, offering residents an idyllic setting that combines natural beauty with convenient access to modern amenities. Our community is situated just minutes from stunning beaches, charming villages, excellent schools, and a wealth of recreational opportunities.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            The unique location provides the perfect balance of privacy and accessibility, creating an exceptional living environment for families, professionals, and retirees alike. Enjoy the serene atmosphere of your luxury home while being connected to all that Long Island has to offer.
-          </Typography>
-        </Box>
+       
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 6 }}>
-          <Card sx={{ flex: 1 }}>
+          <Card sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
             <CardMedia
-              component="img"
-              height="240"
-              image={beachImage}
-              alt="Northport Beaches"
-            />
-            <CardContent>
-              <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+              component="div"
+              sx={{
+                height: "480px",
+                width: "100%",
+                position: "relative",
+                overflow: "hidden"
+              }}
+            >
+              <Box
+                component="img"
+                src={beachImage}
+                alt="Northport Beaches"
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center 40%"
+                }}
+              />
+            </CardMedia>
+            <CardContent sx={{ flexGrow: 1, pb: 2 }}>
+              <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', minHeight: '64px', display: 'flex', alignItems: 'center' }}>
                 Parks, Recreation & Beaches
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -94,15 +172,33 @@ const CommunityPage: React.FC = () => {
             </CardContent>
           </Card>
           
-          <Card sx={{ flex: 1 }}>
+          <Card sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
             <CardMedia
-              component="img"
-              height="240"
-              image={parksImage}
-              alt="Local Parks"
-            />
-            <CardContent>
-              <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+              component="div"
+              sx={{
+                height: "480px",
+                width: "100%",
+                position: "relative",
+                overflow: "hidden"
+              }}
+            >
+              <Box
+                component="img"
+                src={parksImage}
+                alt="Local Parks"
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center 40%"
+                }}
+              />
+            </CardMedia>
+            <CardContent sx={{ flexGrow: 1, pb: 2 }}>
+              <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', minHeight: '64px', display: 'flex', alignItems: 'center' }}>
                 Community Activities
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -117,73 +213,145 @@ const CommunityPage: React.FC = () => {
           subtitle="Enjoy the natural beauty of Northport"
         >
           <div className="community-grid-container" style={{ display: 'flex', flexWrap: 'wrap', width: '100%' }}>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={harborImage}
-                  alt="Northport Harbor"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={harborImage}
+                    alt="Northport Harbor"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Northport Harbor
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     The picturesque Northport Harbor offers spectacular water views, sailing opportunities, and seasonal events. Take leisurely walks along the harbor, watch boats coming in and out, or enjoy seasonal festivals along the waterfront.
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={dockImage}
-                  alt="Northport Dock"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={dockImage}
+                    alt="Northport Dock"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Northport Dock
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     The Northport Dock is a central hub for maritime activities. It's perfect for fishing, enjoying sunsets, or simply watching the boats. During summer months, you can enjoy concerts and community events at this lively location.
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box', mt: { xs: 2, sm: 3 } }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={gazeboImage}
-                  alt="Village Park Gazebo"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={gazeboImage}
+                    alt="Village Park Gazebo"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Northport Village Park
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     The iconic gazebo at Northport Village Park hosts summer concerts and provides a charming spot for relaxation. The park offers beautiful green spaces, perfect for picnics and family gatherings, with stunning views of the harbor.
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box', mt: { xs: 2, sm: 3 } }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={golfImage}
-                  alt="Golf Course"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={golfImage}
+                    alt="Golf Course"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Golf Courses
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     Northport is home to exceptional golf courses, including the Crab Meadow Golf Course, offering challenging play for golfers of all skill levels with scenic views of the Long Island Sound. The Northport Golf Club provides a welcoming environment for both seasoned players and beginners.
                   </Typography>
                 </CardContent>
@@ -199,73 +367,145 @@ const CommunityPage: React.FC = () => {
           subtitle="Discover Northport's charming retail and culinary experiences"
         >
           <div className="community-grid-container" style={{ display: 'flex', flexWrap: 'wrap', width: '100%' }}>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={shopsImage}
-                  alt="Northport Village Shops"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={shopsImage}
+                    alt="Northport Village Shops"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Village Shops
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     Northport Village features a variety of boutique shops offering everything from clothing and home décor to specialty foods and gifts. The charming Main Street is perfect for leisurely shopping, with its historic buildings and unique storefronts.
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={restaurantImage}
-                  alt="Northport Restaurant"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={restaurantImage}
+                    alt="Northport Restaurant"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Fine Dining
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     Northport is known for its excellent dining scene, with many top-rated restaurants offering everything from casual waterfront dining to upscale cuisine. Local favorites include Robke's, Maroni Cuisine, and Skipper's Pub, serving fresh seafood and other local specialties.
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box', mt: { xs: 2, sm: 3 } }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={hotelImage}
-                  alt="Northport Hotel"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={hotelImage}
+                    alt="Northport Hotel"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Northport Hotel
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     The historic Northport Hotel adds charm to the village center and houses dining options for visitors and residents alike. Its location in the heart of town makes it a convenient starting point for exploring Northport's shopping and dining scene.
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box', mt: { xs: 2, sm: 3 } }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={theaterImage}
-                  alt="John Engeman Theater"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={theaterImage}
+                    alt="John Engeman Theater"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Entertainment
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     The John W. Engeman Theater offers Broadway-quality productions right in the heart of Northport. This historic venue features musicals, plays, and special events throughout the year, making it a cultural centerpiece of the community.
                   </Typography>
                 </CardContent>
@@ -281,37 +521,73 @@ const CommunityPage: React.FC = () => {
           subtitle="Embrace the waterfront lifestyle in Northport"
         >
           <div className="community-grid-container" style={{ display: 'flex', flexWrap: 'wrap', width: '100%' }}>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={yachtClubImage}
-                  alt="Northport Yacht Club"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={yachtClubImage}
+                    alt="Northport Yacht Club"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Northport Yacht Club
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     The Northport Yacht Club is a premier destination for boating enthusiasts. Established in 1883, this historic club offers sailing programs, races, and social events in a beautiful waterfront setting. Members enjoy exceptional facilities and a vibrant community of fellow boaters.
                   </Typography>
                 </CardContent>
               </Card>
             </Box>
-            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: 1, boxSizing: 'border-box' }}>
-              <Card sx={{ height: '100%' }}>
+            <Box sx={{ width: { xs: '100%', sm: '50%' }, p: { xs: 1, sm: 2 }, boxSizing: 'border-box' }}>
+              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                 <CardMedia
-                  component="img"
-                  height="300"
-                  image={villageImage}
-                  alt="Northport Village Sign"
-                />
-                <CardContent>
-                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+                  component="div"
+                  sx={{
+                    height: "480px",
+                    width: "100%",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={villageImage}
+                    alt="Northport Village Sign"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center 40%"
+                    }}
+                  />
+                </CardMedia>
+                <CardContent sx={{ flexGrow: 1, pb: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif', height: '64px', display: 'flex', alignItems: 'center' }}>
                     Historic Northport
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
                     Incorporated in 1894, Northport Village maintains its historic charm while offering modern amenities. The village's rich maritime history is evident in its architecture and waterfront design, creating a timeless atmosphere that residents and visitors cherish.
                   </Typography>
                 </CardContent>
