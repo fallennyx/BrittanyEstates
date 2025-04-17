@@ -7,17 +7,17 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 // Import images for slideshow
-import outside1 from '../assets/images/Valerie Pic/FloorPlans/Outside_2021.jpg';
-import outside2 from '../assets/images/Valerie Pic/FloorPlans/Kitchen_2025.jpg';
-import outside3 from '../assets/images/Valerie Pic/FloorPlans/outsidepatio_2089.jpg';
-import outside4 from '../assets/images/Valerie Pic/FloorPlans/Livingroom_2029.jpg';
-import outside5 from '../assets/images/Valerie Pic/FloorPlans/stairs_2047.jpg';
+import outside1 from '../assets/images/arlingtonPlans/Outside_2021.jpg';
+import outside2 from '../assets/images/arlingtonPlans/Kitchen_2025.jpg';
+import outside3 from '../assets/images/arlingtonPlans/outsidepatio_2089.jpg';
+import outside4 from '../assets/images/arlingtonPlans/Livingroom_2029.jpg';
+import outside5 from '../assets/images/arlingtonPlans/stairs_2047.jpg';
 
 
 // Import other images
-import livingroom from '../assets/images/Valerie Pic/FloorPlans/livingroom_2051.jpg';
-import kitchen from '../assets/images/Valerie Pic/FloorPlans/kitchen_2052.jpg';
-import bathroom from '../assets/images/Valerie Pic/FloorPlans/bathroom_2055.jpg';
+import livingroom from '../assets/images/arlingtonPlans/livingroom_2051.jpg';
+import kitchen from '../assets/images/arlingtonPlans/kitchen_2052.jpg';
+import bathroom from '../assets/images/arlingtonPlans/bathroom_2055.jpg';
 
 const HomePage: React.FC = () => {
   const slideshowImages = [outside1, outside2, outside3, outside4, outside5,];
@@ -145,9 +145,11 @@ const HomePage: React.FC = () => {
         subtitle="Luxury Living in Northport, Long Island"
         py={4}
       >
-        <Typography variant="body1" paragraph align="center" sx={{ mb: 4, maxWidth: '800px', mx: 'auto' }}>
-          Nestled in the scenic landscape of Northport, Brittany Estates offers an exclusive collection 
-          of luxury homes designed with uncompromising quality and attention to detail.
+        <Typography variant="h4" paragraph align="center" sx={{ mb: 4, maxWidth: '7000px', mx: 'auto' }}>
+          Your dream home awaits you in Northport Long Island.   
+          
+  <br />                           
+             Uncompromising in Build and Beauty. A bucolic hidden Treasure.
         </Typography>
         
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 3, mb: 4 }}>

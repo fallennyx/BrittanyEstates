@@ -5,19 +5,19 @@ import Section from '../components/Section';
 import {Link as RouterLink} from 'react-router-dom';
 
 // Import actual images from assets
-import beachImage from '../assets/images/Valerie Pic/CommunityFeatures/crabmeadowbeach.jpg';
-import parksImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport Park Playground.jpg';
-import harborImage from '../assets/images/Valerie Pic/CommunityFeatures/Nothport Harbor.jpg';
-import villageImage from '../assets/images/Valerie Pic/CommunityFeatures/northport_village_sign.webp';
-import golfImage from '../assets/images/Valerie Pic/CommunityFeatures/Golf Course.jpg';
-import theaterImage from '../assets/images/Valerie Pic/CommunityFeatures/John Engemen theater.jpg';
-import restaurantImage from '../assets/images/Valerie Pic/CommunityFeatures/Main Street Cafe- Northport Restaurant.jpg';
-import shopsImage from '../assets/images/Valerie Pic/CommunityFeatures/Nothport Village shops.jpg';
-import dockImage from '../assets/images/Valerie Pic/CommunityFeatures/Northort Dock.jpeg';
-import gazeboImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport village park gazebo.jpg';
-import yachtClubImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport-Yacht-Club.jpg';
-import hotelImage from '../assets/images/Valerie Pic/CommunityFeatures/Northport Hotel.jpg';
-import northportpark from '../assets/images/Valerie Pic/CommunityFeatures/villagepark.jpg';
+import beachImage from '../assets/images/CommunityFeatures/crabmeadowbeach.jpg';
+import parksImage from '../assets/images/CommunityFeatures/Northport Park Playground.jpg';
+import harborImage from '../assets/images/CommunityFeatures/Nothport Harbor.jpg';
+import villageImage from '../assets/images/CommunityFeatures/northport_village_sign.webp';
+import golfImage from '../assets/images/CommunityFeatures/Golf Course.jpg';
+import theaterImage from '../assets/images/CommunityFeatures/John Engemen theater.jpg';
+import restaurantImage from '../assets/images/CommunityFeatures/Main Street Cafe- Northport Restaurant.jpg';
+import shopsImage from '../assets/images/CommunityFeatures/Nothport Village shops.jpg';
+import dockImage from '../assets/images/CommunityFeatures/Northort Dock.jpeg';
+import gazeboImage from '../assets/images/CommunityFeatures/Northport village park gazebo.jpg';
+import yachtClubImage from '../assets/images/CommunityFeatures/Northport-Yacht-Club.jpg';
+import hotelImage from '../assets/images/CommunityFeatures/Northport Hotel.jpg';
+import northportpark from '../assets/images/CommunityFeatures/villagepark.jpg';
 
 const CommunityPage: React.FC = () => {
   return (

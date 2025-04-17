@@ -16,6 +16,7 @@ import ContactPage from './pages/ContactPage';
 import FaqPage from './pages/FaqPage';
 import ArlingtonHomePage from './pages/homeDesigns/ArlingtonHomePage';
 import TheCountryPage from './pages/homeDesigns/TheCountry';
+import AshleyTwoPage from './pages/homeDesigns/AshleyTwo';
 
 // ScrollToTop wrapper component
 function ScrollToTop() {
@@ -62,6 +63,7 @@ function App() {
           <Route path="/home-designs" element={<HomeDesignsPage />} />
           <Route path="/home-designs/arlington" element={<ArlingtonHomePage />} />
           <Route path="/home-designs/thecountry" element={<TheCountryPage />} />
+          <Route path="/home-designs/ashley-two" element={<AshleyTwoPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/blog" element={<BlogPage />} />

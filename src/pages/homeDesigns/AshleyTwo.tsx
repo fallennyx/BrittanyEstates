@@ -20,7 +20,7 @@ import CloseIcon from '@mui/icons-material/Close';
 // Placeholder images
 import placeholderImage from '../../assets/images/arlingtonPlans/Front_2024.jpg';
 
-const TheCountryPage: React.FC = () => {
+const AshleyTwoPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("interior");
   const [openModal, setOpenModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
@@ -65,10 +65,10 @@ const TheCountryPage: React.FC = () => {
               gutterBottom
               sx={{ fontFamily: '"Playfair Display", serif', pt: 2 }}
             >
-              The Country
+              The Ashley Two
             </Typography>
             <Typography variant="h6" sx={{ maxWidth: '800px', mb: 4 }}>
-              5 Bedrooms, 3 Bathrooms, 1 Acre Property, 3,400 Sq Ft
+              5 Bedrooms, 3.5 Bathrooms, 1 Acre Property, 4,000 Sq Ft
             </Typography>
           </Box>
         </Container>
@@ -80,7 +80,7 @@ const TheCountryPage: React.FC = () => {
       >
         <Box sx={{ mb: 6 }}>
           <Typography variant="body1" paragraph>
-            The Country is a luxurious estate home offering 3,400 square feet of meticulously designed living space. This elegant home features an open-concept layout with premium finishes throughout.
+            The Ashley II is a luxurious estate home offering 4,000 square feet of meticulously designed living space. This elegant home features an open-concept layout with premium finishes throughout.
           </Typography>
           
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 4 }}>
@@ -94,17 +94,17 @@ const TheCountryPage: React.FC = () => {
             </Box>
             <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 8px)', md: 'calc(25% - 12px)' } }}>
               <Paper elevation={2} sx={{ p: 3, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography variant="h6" gutterBottom align="center">3 Bathrooms</Typography>
+                <Typography variant="h6" gutterBottom align="center">3.5 Bathrooms</Typography>
                 <Typography variant="body2" color="text.secondary" align="center">
-                  Featuring premium fixtures and central air conditioning
+                  Featuring premium fixtures and radiant heat
                 </Typography>
               </Paper>
             </Box>
             <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 8px)', md: 'calc(25% - 12px)' } }}>
               <Paper elevation={2} sx={{ p: 3, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography variant="h6" gutterBottom align="center">3,400 Sq Ft</Typography>
+                <Typography variant="h6" gutterBottom align="center">4,000 Sq Ft</Typography>
                 <Typography variant="body2" color="text.secondary" align="center">
-                  Spacious living areas with hardwood floors and crown moldings
+                  Spacious living areas with 4" oak hardwood floors and 7" crown moldings
                 </Typography>
               </Paper>
             </Box>
@@ -119,13 +119,13 @@ const TheCountryPage: React.FC = () => {
           </Box>
           
           <Typography variant="body1" paragraph>
-            The Country combines traditional elegance with modern amenities, creating a timeless home that will be enjoyed for generations. Every detail has been carefully considered, from the premium hardwood floors to the custom cabinetry and designer lighting.
+            The Ashley II combines traditional elegance with modern amenities, creating a timeless home that will be enjoyed for generations. Every detail has been carefully considered, from the premium hardwood floors to the custom cabinetry and designer lighting.
           </Typography>
         </Box>
 
         <Section
           title="Interior Features"
-          subtitle="Explore the thoughtful layout of The Country"
+          subtitle="Explore the thoughtful layout of The Ashley II"
         >
           <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
             <Box sx={{ width: { xs: '100%', md: 'calc(50% - 12px)' } }}>
@@ -148,7 +148,7 @@ const TheCountryPage: React.FC = () => {
                     Interior Features
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    5 Bedrooms, Full Basement, Entry Foyer, Formal Living Room, Formal Dining Room, Family Room, Bedroom/Office With Full Bath, Chef's Eat-In Kitchen, Master Suite With Full Bath, First Floor Laundry, Colonial Style, New Construction Home
+                    5 Bedrooms, 3.5 Bathrooms, 2-Story Entry Foyer, Formal Living Room, Formal Dining Room, Family Room, Bedroom/Office With Full Bath, 2 Walk-In Closets, Gourmet Eat-In Kitchen, High-End Appliances, Gas Cooking, Master Suite With Full Bath, First Floor Laundry With OSE, Full Basement, Central Air Conditioning, Central VAC, 4" Oak Hardwood Floors, 7" Crown Moldings, Andersen Windows, Oil Heat, Radiant Heat, Post Modern Style, New Construction Home
                   </Typography>
                 </CardContent>
               </Card>
@@ -158,7 +158,7 @@ const TheCountryPage: React.FC = () => {
 
         <Section
           title="Exterior Features"
-          subtitle="Experience the beauty of The Country"
+          subtitle="Experience the beauty of The Ashley II"
         >
           <Box sx={{ width: '100%', mb: 4 }}>
             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }, gap: 2 }}>
@@ -189,11 +189,23 @@ const TheCountryPage: React.FC = () => {
               </Box>
             </Box>
           </Box>
+          <Box sx={{ width: { xs: '100%', md: 'calc(50% - 12px)' } }}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent>
+                <Typography variant="h5" component="h3" gutterBottom>
+                  Exterior Features
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  1 Acre Property, Beautiful Landscaping, 2 Car Attached Garage, Private Driveway, Hardplank & Stone Siding, Established Neighborhood, Cul De Sac Location/No Thru Traffic
+                </Typography>
+              </CardContent>
+            </Card>
+          </Box>
         </Section>
 
         <Box sx={{ textAlign: 'center', mt: 8, p: 4, bgcolor: 'background.paper', borderRadius: 2 }}>
           <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
-            Ready to Make The Country Your Home?
+            Ready to Make The Ashley II Your Home?
           </Typography>
           <Typography variant="body1" paragraph>
             Schedule a consultation with our team to discuss customization options and pricing for this luxury estate home.
@@ -259,4 +271,4 @@ const TheCountryPage: React.FC = () => {
   );
 };
 
-export default TheCountryPage; 
+export default AshleyTwoPage; 

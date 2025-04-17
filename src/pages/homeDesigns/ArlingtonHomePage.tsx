@@ -1,73 +1,86 @@
-import React, { useState } from 'react';
-import { Box, Typography, Button, Container, Card, CardContent, CardMedia, Tabs, Tab, Paper, Modal, IconButton } from '@mui/material';
+import React, {useState} from 'react';
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Container,
+  IconButton,
+  Modal,
+  Paper,
+  Tab,
+  Tabs,
+  Typography
+} from '@mui/material';
 import Layout from '../../components/Layout';
 import Section from '../../components/Section';
 import BackButton from '../../components/BackButton';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 
 // Import floor plan images
-import floorPlan401 from '../../assets/images/Valerie Pic/FloorPlans/large_401.jpg';
-import floorPlan402 from '../../assets/images/Valerie Pic/FloorPlans/large_402.jpg';
-import floorPlan403 from '../../assets/images/Valerie Pic/FloorPlans/large_403.jpg';
-import floorPlan404 from '../../assets/images/Valerie Pic/FloorPlans/large_404.jpg';
+import floorPlan401 from '../../assets/images/arlingtonPlans/large_401.jpg';
+import floorPlan402 from '../../assets/images/arlingtonPlans/large_402.jpg';
+import floorPlan403 from '../../assets/images/arlingtonPlans/large_403.jpg';
+import floorPlan404 from '../../assets/images/arlingtonPlans/large_404.jpg';
 
 // Import home images with descriptive names
 // Exterior
-import outsideImage2021 from '../../assets/images/Valerie Pic/FloorPlans/Outside_2021.jpg';
-import outsideImage2022 from '../../assets/images/Valerie Pic/FloorPlans/Outside_2022.jpg';
-import outsideImage2098 from '../../assets/images/Valerie Pic/FloorPlans/outside_2098.jpg';
-import sideOutsideImage2091 from '../../assets/images/Valerie Pic/FloorPlans/sideoutside_2091.jpg';
-import outsidePatioImage2090 from '../../assets/images/Valerie Pic/FloorPlans/outsidepatio_2090.jpg';
-import outsidePatioImage2089 from '../../assets/images/Valerie Pic/FloorPlans/outsidepatio_2089.jpg';
-import outsidePatioImage2086 from '../../assets/images/Valerie Pic/FloorPlans/outsidepatio_2086.jpg';
+import outsideImage2021 from '../../assets/images/arlingtonPlans/Outside_2021.jpg';
+import outsideImage2022 from '../../assets/images/arlingtonPlans/Outside_2022.jpg';
+import outsideImage2098 from '../../assets/images/arlingtonPlans/outside_2098.jpg';
+import sideOutsideImage2091 from '../../assets/images/arlingtonPlans/sideoutside_2091.jpg';
+import outsidePatioImage2090 from '../../assets/images/arlingtonPlans/outsidepatio_2090.jpg';
+import outsidePatioImage2089 from '../../assets/images/arlingtonPlans/outsidepatio_2089.jpg';
+import outsidePatioImage2086 from '../../assets/images/arlingtonPlans/outsidepatio_2086.jpg';
 
 // Kitchen
-import frontImage2024 from '../../assets/images/Valerie Pic/FloorPlans/Front_2024.jpg';
-import kitchenImage2025 from '../../assets/images/Valerie Pic/FloorPlans/Kitchen_2025.jpg';
-import kitchenImage2026 from '../../assets/images/Valerie Pic/FloorPlans/Kitchen_2026.jpg';
-import kitchenImage2028 from '../../assets/images/Valerie Pic/FloorPlans/Kitchen_2028.jpg';
-import kitchenImage2031 from '../../assets/images/Valerie Pic/FloorPlans/kitchen_2031.jpg';
-import kitchenImage2035 from '../../assets/images/Valerie Pic/FloorPlans/kitchen_2035.jpg';
-import kitchenImage2052 from '../../assets/images/Valerie Pic/FloorPlans/kitchen_2052.jpg';
+import frontImage2024 from '../../assets/images/arlingtonPlans/Front_2024.jpg';
+import kitchenImage2025 from '../../assets/images/arlingtonPlans/Kitchen_2025.jpg';
+import kitchenImage2026 from '../../assets/images/arlingtonPlans/Kitchen_2026.jpg';
+import kitchenImage2028 from '../../assets/images/arlingtonPlans/Kitchen_2028.jpg';
+import kitchenImage2031 from '../../assets/images/arlingtonPlans/kitchen_2031.jpg';
+import kitchenImage2035 from '../../assets/images/arlingtonPlans/kitchen_2035.jpg';
+import kitchenImage2052 from '../../assets/images/arlingtonPlans/kitchen_2052.jpg';
 
 // Living Areas
-import livingRoomImage2029 from '../../assets/images/Valerie Pic/FloorPlans/Livingroom_2029.jpg';
-import livingRoomImage2030 from '../../assets/images/Valerie Pic/FloorPlans/livingroom_2030.jpg';
-import livingRoomImage2051 from '../../assets/images/Valerie Pic/FloorPlans/livingroom_2051.jpg';
-import livingImage2033 from '../../assets/images/Valerie Pic/FloorPlans/living_2033.jpg';
+import livingRoomImage2029 from '../../assets/images/arlingtonPlans/Livingroom_2029.jpg';
+import livingRoomImage2030 from '../../assets/images/arlingtonPlans/livingroom_2030.jpg';
+import livingRoomImage2051 from '../../assets/images/arlingtonPlans/livingroom_2051.jpg';
+import livingImage2033 from '../../assets/images/arlingtonPlans/living_2033.jpg';
 
 // Hallways and Stairs
-import hallwayImage2027 from '../../assets/images/Valerie Pic/FloorPlans/Hallway_2027.jpg';
-import hallwayImage2041 from '../../assets/images/Valerie Pic/FloorPlans/hallway_2041.jpg';
-import hallwayImage2043 from '../../assets/images/Valerie Pic/FloorPlans/hallway_2043.jpg';
-import stairsImage2047 from '../../assets/images/Valerie Pic/FloorPlans/stairs_2047.jpg';
+import hallwayImage2027 from '../../assets/images/arlingtonPlans/Hallway_2027.jpg';
+import hallwayImage2041 from '../../assets/images/arlingtonPlans/hallway_2041.jpg';
+import hallwayImage2043 from '../../assets/images/arlingtonPlans/hallway_2043.jpg';
+import stairsImage2047 from '../../assets/images/arlingtonPlans/stairs_2047.jpg';
 
 // Bathrooms
-import bathroomImage2040 from '../../assets/images/Valerie Pic/FloorPlans/bathroom_2040.jpg';
-import bathroomImage2055 from '../../assets/images/Valerie Pic/FloorPlans/bathroom_2055.jpg';
+import bathroomImage2040 from '../../assets/images/arlingtonPlans/bathroom_2040.jpg';
+import bathroomImage2055 from '../../assets/images/arlingtonPlans/bathroom_2055.jpg';
 
 // Utility Rooms
-import laundryImage2053 from '../../assets/images/Valerie Pic/FloorPlans/laundry_2053.jpg';
-import windowImage2054 from '../../assets/images/Valerie Pic/FloorPlans/window_2054.jpg';
+import laundryImage2053 from '../../assets/images/arlingtonPlans/laundry_2053.jpg';
+import windowImage2054 from '../../assets/images/arlingtonPlans/window_2054.jpg';
 
 // Other images without descriptive prefixes
-import homeImage2060 from '../../assets/images/Valerie Pic/FloorPlans/large_2060.jpg';
-import homeImage2061 from '../../assets/images/Valerie Pic/FloorPlans/large_2061.jpg';
-import homeImage2064 from '../../assets/images/Valerie Pic/FloorPlans/large_2064.jpg';
-import homeImage2065 from '../../assets/images/Valerie Pic/FloorPlans/large_2065.jpg';
-import homeImage2066 from '../../assets/images/Valerie Pic/FloorPlans/large_2066.jpg';
-import homeImage2069 from '../../assets/images/Valerie Pic/FloorPlans/large_2069.jpg';
-import homeImage2070 from '../../assets/images/Valerie Pic/FloorPlans/large_2070.jpg';
-import homeImage2072 from '../../assets/images/Valerie Pic/FloorPlans/large_2072.jpg';
-import homeImage2075 from '../../assets/images/Valerie Pic/FloorPlans/large_2075.jpg';
-import homeImage2076 from '../../assets/images/Valerie Pic/FloorPlans/large_2076.jpg';
-import homeImage2077 from '../../assets/images/Valerie Pic/FloorPlans/large_2077.jpg';
-import homeImage2078 from '../../assets/images/Valerie Pic/FloorPlans/large_2078.jpg';
-import homeImage2085 from '../../assets/images/Valerie Pic/FloorPlans/large_2085.jpg';
-import homeImage2087 from '../../assets/images/Valerie Pic/FloorPlans/large_2087.jpg';
-import homeImage2096 from '../../assets/images/Valerie Pic/FloorPlans/large_2096.jpg';
-import homeImage2097 from '../../assets/images/Valerie Pic/FloorPlans/large_2097.jpg';
+import homeImage2060 from '../../assets/images/arlingtonPlans/large_2060.jpg';
+import homeImage2061 from '../../assets/images/arlingtonPlans/large_2061.jpg';
+import homeImage2064 from '../../assets/images/arlingtonPlans/large_2064.jpg';
+import homeImage2065 from '../../assets/images/arlingtonPlans/large_2065.jpg';
+import homeImage2066 from '../../assets/images/arlingtonPlans/large_2066.jpg';
+import homeImage2069 from '../../assets/images/arlingtonPlans/large_2069.jpg';
+import homeImage2070 from '../../assets/images/arlingtonPlans/large_2070.jpg';
+import homeImage2072 from '../../assets/images/arlingtonPlans/large_2072.jpg';
+import homeImage2075 from '../../assets/images/arlingtonPlans/large_2075.jpg';
+import homeImage2076 from '../../assets/images/arlingtonPlans/large_2076.jpg';
+import homeImage2077 from '../../assets/images/arlingtonPlans/large_2077.jpg';
+import homeImage2078 from '../../assets/images/arlingtonPlans/large_2078.jpg';
+import homeImage2085 from '../../assets/images/arlingtonPlans/large_2085.jpg';
+import homeImage2087 from '../../assets/images/arlingtonPlans/large_2087.jpg';
+import homeImage2096 from '../../assets/images/arlingtonPlans/large_2096.jpg';
+import homeImage2097 from '../../assets/images/arlingtonPlans/large_2097.jpg';
 
 // Floor plan data with descriptions
 const floorPlans = [

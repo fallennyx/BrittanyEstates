@@ -6,7 +6,7 @@ import Section from '../components/Section';
 import {Link as RouterLink} from 'react-router-dom';
 
 // Import preview images for each home design
-import arlingtonPreview from '../assets/images/Valerie Pic/FloorPlans/Outside_2021.jpg';
+import arlingtonPreview from '../assets/images/arlingtonPlans/Outside_2021.jpg';
 
 // Home design data
 const homeDesigns = [
@@ -21,14 +21,14 @@ const homeDesigns = [
     path: '/home-designs/arlington'
   },
   {
-    id: 'cambridge',
-    name: 'The Cambridge',
-    sqFt: '3,200',
-    bedrooms: 3,
-    bathrooms: 2.5,
-    description: 'A sophisticated family home with an open floor plan, gourmet kitchen, and spacious primary suite.',
+    id: 'ashley-two',
+    name: 'The Ashley II',
+    sqFt: '4,000',
+    bedrooms: 5,
+    bathrooms: 3.5,
+    description: 'A sophisticated family home with 2-story entry foyer, gourmet kitchen, and premium features including oak hardwood floors and crown moldings.',
     previewImage: arlingtonPreview, // Placeholder - replace with actual image
-    path: '/home-designs/cambridge'
+    path: '/home-designs/ashley-two'
   },
   {
     id: 'westchester',
