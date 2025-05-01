@@ -15,11 +15,6 @@ import {
   Typography
 } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import {Resend} from 'resend';
-
-// In Create React App, environment variables must be prefixed with REACT_APP_
-const resendApiKey = process.env.REACT_APP_RESEND_API_KEY;
-const resend = new Resend(resendApiKey);
 
 interface ContactFormProps {
   onSubmit?: (formData: ContactFormData) => void;
@@ -76,33 +71,42 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prevData: ContactFormData) => ({ ...prevData, [name]: value }));
   };
 
   const sendEmail = async (formData: ContactFormData) => {
     try {
-      const { data, error } = await resend.emails.send({
-        from: 'Brittany Estates <onboarding@resend.dev>',
-        to: ['1eakanmu@gmail.com'], // Change this to your email address
-        subject: `New Contact Form Submission - ${formData.interestedIn}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
-          <p><strong>Email:</strong> ${formData.email}</p>
-          <p><strong>Phone:</strong> ${formData.phone || 'Not provided'}</p>
-          <p><strong>Interested In:</strong> ${formData.interestedIn}</p>
-          <p><strong>Message:</strong></p>
-          <p>${formData.message}</p>
-        `,
+      const htmlContent = `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Phone:</strong> ${formData.phone || 'Not provided'}</p>
+        <p><strong>Interested In:</strong> ${formData.interestedIn}</p>
+        <p><strong>Message:</strong></p>
+        <p>${formData.message}</p>
+      `;
+
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: ['1eakanmu@gmail.com'], // Change this to your email address
+          subject: `New Contact Form Submission - ${formData.interestedIn}`,
+          templateProps: htmlContent,
+        }),
       });
 
-      if (error) {
-        console.error({ error });
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Server error:', errorData);
         setEmailError('Failed to send email. Please try again later.');
         return false;
       }
 
-      console.log({ data });
+      const data = await response.json();
+      console.log('Email sent successfully:', data);
       return true;
     } catch (err) {
       console.error('Error sending email:', err);
