@@ -20,7 +20,7 @@ import CloseIcon from '@mui/icons-material/Close';
 // Placeholder images
 import placeholderImage from '../../assets/images/arlingtonPlans/Front_2024.jpg';
 
-const AshleyTwoPage: React.FC = () => {
+const Ashley2Page: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("interior");
   const [openModal, setOpenModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
@@ -65,7 +65,7 @@ const AshleyTwoPage: React.FC = () => {
               gutterBottom
               sx={{ fontFamily: '"Playfair Display", serif', pt: 2 }}
             >
-              The Ashley Two
+              The Ashley II
             </Typography>
             <Typography variant="h6" sx={{ maxWidth: '800px', mb: 4 }}>
               5 Bedrooms, 3.5 Bathrooms, 1 Acre Property, 4,000 Sq Ft
@@ -271,4 +271,4 @@ const AshleyTwoPage: React.FC = () => {
   );
 };
 
-export default AshleyTwoPage; 
+export default Ashley2Page; 

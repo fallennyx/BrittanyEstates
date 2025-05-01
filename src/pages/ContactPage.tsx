@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Link, Paper } from '@mui/material';
+import {Box, Link, Paper, Typography} from '@mui/material';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import ContactForm from '../components/ContactForm';
@@ -32,10 +32,16 @@ const ContactPage: React.FC = () => {
                   <Typography variant="subtitle1" fontWeight="bold">
                     Visit Our Sales Office
                   </Typography>
+                  <Typography variant="body2" sx={{ mb: 1 }}>
+                    Douglas Elliman<br />
+                    1772 E Jericho Turnpike<br />
+                    Huntington, NY 11743
+                  </Typography>
                   <Typography variant="body2">
-                    123 Brittany Way<br />
-                    Northport, NY 11768<br />
-                    United States
+                    <br />
+                    Pebble Hill Building Corp<br />
+                    1016 Fort Salonga Road<br />
+                    Northport, NY 11768
                   </Typography>
                 </Box>
               </Box>
@@ -47,8 +53,8 @@ const ContactPage: React.FC = () => {
                     Call Us
                   </Typography>
                   <Typography variant="body2">
-                    <Link href="tel:5165551234" color="inherit" underline="hover">
-                      (516) 555-1234
+                    <Link href="tel:6317932255" color="inherit" underline="hover">
+                      (631) 793-CALL (2255)
                     </Link>
                   </Typography>
                 </Box>

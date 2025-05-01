@@ -6,39 +6,39 @@ import Section from '../components/Section';
 import {Link as RouterLink} from 'react-router-dom';
 
 // Import preview images for each home design
-import arlingtonPreview from '../assets/images/arlingtonPlans/Outside_2021.jpg';
+import ashley2Preview from '../assets/images/arlingtonPlans/Outside_2021.jpg';
 
 // Home design data
 const homeDesigns = [
   {
-    id: 'arlington',
-    name: 'The Arlington',
-    sqFt: '3,800',
-    bedrooms: 4,
-    bathrooms: 3.5,
-    description: 'A luxurious estate home featuring elegant design, premium finishes, and thoughtful spaces for modern living.',
-    previewImage: arlingtonPreview,
-    path: '/home-designs/arlington'
-  },
-  {
-    id: 'ashley-two',
-    name: 'The Ashley II',
-    sqFt: '4,000',
-    bedrooms: 5,
-    bathrooms: 3.5,
-    description: 'A sophisticated family home with 2-story entry foyer, gourmet kitchen, and premium features including oak hardwood floors and crown moldings.',
-    previewImage: arlingtonPreview, // Placeholder - replace with actual image
-    path: '/home-designs/ashley-two'
-  },
-  {
-    id: 'westchester',
-    name: 'The Westchester',
+    id: 'ashley-3',
+    name: 'The Ashley III',
     sqFt: '4,100',
     bedrooms: 5,
     bathrooms: 4,
     description: 'An expansive estate home with luxury amenities including a home theater, wine cellar, and outdoor living space.',
-    previewImage: arlingtonPreview, // Placeholder - replace with actual image
-    path: '/home-designs/westchester'
+    previewImage: ashley2Preview, // Placeholder - replace with actual image
+    path: '/home-designs/ashley-3'
+  },
+  {
+    id: 'ashley-2',
+    name: 'The Ashley II',
+    sqFt: '3,800',
+    bedrooms: 4,
+    bathrooms: 3.5,
+    description: 'A luxurious estate home featuring elegant design, premium finishes, and thoughtful spaces for modern living.',
+    previewImage: ashley2Preview,
+    path: '/home-designs/ashley-2'
+  },
+  {
+    id: 'ashley-1',
+    name: 'The Ashley I',
+    sqFt: '3,400',
+    bedrooms: 4,
+    bathrooms: 3,
+    description: 'A sophisticated family home with 2-story entry foyer, gourmet kitchen, and premium features including oak hardwood floors and crown moldings.',
+    previewImage: ashley2Preview, // Placeholder - replace with actual image
+    path: '/home-designs/ashley-1'
   },
   {
     id: 'the-country',
@@ -47,8 +47,18 @@ const homeDesigns = [
     bedrooms: 5,
     bathrooms: 3,
     description: 'A luxurious estate home with spacious living areas, premium finishes, and a beautifully landscaped property.',
-    previewImage: arlingtonPreview, // Placeholder - replace with actual image
+    previewImage: ashley2Preview, // Placeholder - replace with actual image
     path: '/home-designs/thecountry'
+  },
+  {
+    id: 'victoria-2',
+    name: 'The Victoria 2',
+    sqFt: '4,000',
+    bedrooms: 5,
+    bathrooms: 3.5,
+    description: 'A sophisticated family home with elegant design features, spacious entertaining areas, and premium finishes throughout.',
+    previewImage: ashley2Preview, // Placeholder - replace with actual image
+    path: '/home-designs/victoria-2'
   }
 ];
 
