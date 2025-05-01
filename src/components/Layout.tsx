@@ -27,7 +27,6 @@ const navItems = [
   { name: 'Home Designs', path: '/home-designs' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Testimonials', path: '/testimonials' },
-  { name: 'Blog', path: '/blog' },
   { name: 'Contact', path: '/contact' },
   { name: 'FAQ', path: '/faq' },
 ];
@@ -47,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Brittany Estates
+        Brittney Estates
       </Typography>
       <Divider />
       <List>
@@ -86,7 +85,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               fontFamily: '"Playfair Display", serif',
             }}
           >
-            Brittany Estates
+            Brittney Estates
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             {navItems.map((item) => (
@@ -149,7 +148,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             Pebble Hill Building Corp presents
           </Typography>
           <Typography variant="h5" align="center" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
-            Brittany Estates
+            Brittney Estates
           </Typography>
           <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
             Your dream home awaits you in Northport, Long Island

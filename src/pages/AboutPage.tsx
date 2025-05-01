@@ -41,7 +41,7 @@ const AboutPage: React.FC = () => {
             px: 2,
           }}
         >
-          About Brittany Estates
+          About Brittney Estates
         </Typography>
       </Box>
 
@@ -51,13 +51,13 @@ const AboutPage: React.FC = () => {
       >
         <Box sx={{ mb: 6 }}>
           <Typography variant="body1" paragraph>
-            Brittany Estates began as a vision to create an exclusive community of luxury homes that harmonize with the natural beauty of Northport, Long Island. What was once pristine land has been thoughtfully developed into a collection of elegant residences, each designed to offer residents an unparalleled living experience.
+            Brittney Estates began as a vision to create an exclusive community of luxury homes that harmonize with the natural beauty of Northport, Long Island. What was once pristine land has been thoughtfully developed into a collection of elegant residences, each designed to offer residents an unparalleled living experience.
           </Typography>
           <Typography variant="body1" paragraph>
             Our journey started with careful planning and a commitment to preserving the natural character of the land. Each lot was meticulously laid out to maximize privacy and views, while roadways and infrastructure were designed to blend seamlessly with the landscape.
           </Typography>
           <Typography variant="body1" paragraph>
-            Today, Brittany Estates stands as a testament to our dedication to creating not just houses, but true homes where families can thrive and create lasting memories.
+            Today, Brittney Estates stands as a testament to our dedication to creating not just houses, but true homes where families can thrive and create lasting memories.
           </Typography>
         </Box>
 
@@ -66,7 +66,7 @@ const AboutPage: React.FC = () => {
             Our Vision
           </Typography>
           <Typography variant="body1" paragraph>
-            To create an exceptional living environment that combines architectural excellence, natural beauty, and community harmony. We envision Brittany Estates as more than just a luxury development—it's a place where residents feel a deep connection to their surroundings and enjoy a lifestyle of comfort and distinction.
+            To create an exceptional living environment that combines architectural excellence, natural beauty, and community harmony. We envision Brittney Estates as more than just a luxury development—it's a place where residents feel a deep connection to their surroundings and enjoy a lifestyle of comfort and distinction.
           </Typography>
         </Paper>
 
@@ -92,7 +92,7 @@ const AboutPage: React.FC = () => {
             About The Builder
           </Typography>
           <Typography variant="body1" paragraph>
-            Each home in Brittany Estates is crafted with unwavering attention to detail by our skilled team of builders. Our construction specialists bring decades of combined experience to every project, ensuring that each residence meets our exacting standards.
+            Each home in Brittney Estates is crafted with unwavering attention to detail by our skilled team of builders. Our construction specialists bring decades of combined experience to every project, ensuring that each residence meets our exacting standards.
           </Typography>
           <Typography variant="body1" paragraph>
             We employ only the finest materials and latest building techniques, combining traditional craftsmanship with modern innovations to create homes that are both beautiful and enduring.

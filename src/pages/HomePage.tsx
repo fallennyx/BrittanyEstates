@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
             key={index}
             component="img"
             src={img}
-            alt={`Brittany Estates ${index + 1}`}
+            alt={`Brittney Estates ${index + 1}`}
             sx={{
               position: 'absolute',
               top: 0,
@@ -141,7 +141,7 @@ const HomePage: React.FC = () => {
       </Box>
       
       <Section
-        title="Welcome to Brittany Estates"
+        title="Welcome to Brittney Estates"
         subtitle="Luxury Living in Northport, Long Island"
         py={4}
       >

@@ -13,7 +13,7 @@ const ContactPage: React.FC = () => {
     <Layout>
       <Section
         title="Contact Us"
-        subtitle="We'd love to hear from you. Reach out to learn more about Brittany Estates."
+        subtitle="We'd love to hear from you. Reach out to learn more about Brittney Estates."
       >
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 6 }}>
           <Box sx={{ flex: 1 }}>
@@ -22,22 +22,22 @@ const ContactPage: React.FC = () => {
           
           <Box sx={{ flex: 1 }}>
             <Paper elevation={2} sx={{ p: 3, height: '100%' }}>
-              <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
+              <Typography variant="h4" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
                 Contact Information
               </Typography>
               
               <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 3 }}>
-                <LocationOnIcon sx={{ color: 'primary.main', mr: 2, mt: 0.5 }} />
+                <LocationOnIcon sx={{ color: 'primary.main', mr: 2, mt: 0.5, fontSize: '1.5rem' }} />
                 <Box>
-                  <Typography variant="subtitle1" fontWeight="bold">
+                  <Typography variant="h6" fontWeight="bold">
                     Visit Our Sales Office
                   </Typography>
-                  <Typography variant="body2" sx={{ mb: 1 }}>
+                  <Typography variant="body1" sx={{ mb: 1, fontSize: '1.1rem' }}>
                     Douglas Elliman<br />
                     1772 E Jericho Turnpike<br />
                     Huntington, NY 11743
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography variant="body1" sx={{ fontSize: '1.1rem' }}>
                     <br />
                     Pebble Hill Building Corp<br />
                     1016 Fort Salonga Road<br />
@@ -47,12 +47,12 @@ const ContactPage: React.FC = () => {
               </Box>
               
               <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 3 }}>
-                <PhoneIcon sx={{ color: 'primary.main', mr: 2, mt: 0.5 }} />
+                <PhoneIcon sx={{ color: 'primary.main', mr: 2, mt: 0.5, fontSize: '1.5rem' }} />
                 <Box>
-                  <Typography variant="subtitle1" fontWeight="bold">
+                  <Typography variant="h6" fontWeight="bold">
                     Call Us
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography variant="body1" sx={{ fontSize: '1.1rem' }}>
                     <Link href="tel:6317932255" color="inherit" underline="hover">
                       (631) 793-CALL (2255)
                     </Link>
@@ -61,26 +61,26 @@ const ContactPage: React.FC = () => {
               </Box>
               
               <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 3 }}>
-                <EmailIcon sx={{ color: 'primary.main', mr: 2, mt: 0.5 }} />
+                <EmailIcon sx={{ color: 'primary.main', mr: 2, mt: 0.5, fontSize: '1.5rem' }} />
                 <Box>
-                  <Typography variant="subtitle1" fontWeight="bold">
+                  <Typography variant="h6" fontWeight="bold">
                     Email Us
                   </Typography>
-                  <Typography variant="body2">
-                    <Link href="mailto:info@brittanyestates.com" color="inherit" underline="hover">
-                      info@brittanyestates.com
+                  <Typography variant="body1" sx={{ fontSize: '1.1rem' }}>
+                    <Link href="mailto:info@brittneyestates.com" color="inherit" underline="hover">
+                      info@brittneyestates.com
                     </Link>
                   </Typography>
                 </Box>
               </Box>
               
               <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-                <AccessTimeIcon sx={{ color: 'primary.main', mr: 2, mt: 0.5 }} />
+                <AccessTimeIcon sx={{ color: 'primary.main', mr: 2, mt: 0.5, fontSize: '1.5rem' }} />
                 <Box>
-                  <Typography variant="subtitle1" fontWeight="bold">
+                  <Typography variant="h6" fontWeight="bold">
                     Office Hours
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography variant="body1" sx={{ fontSize: '1.1rem' }}>
                     Monday - Friday: 9:00 AM - 5:00 PM<br />
                     Saturday: 10:00 AM - 4:00 PM<br />
                     Sunday: By appointment only
@@ -106,8 +106,8 @@ const ContactPage: React.FC = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Brittany Estates Location"
-            aria-label="Map showing the location of Brittany Estates"
+            title="Brittney Estates Location"
+            aria-label="Map showing the location of Brittney Estates"
           />
         </Box>
       </Section>

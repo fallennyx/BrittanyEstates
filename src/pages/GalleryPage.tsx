@@ -97,7 +97,7 @@ const GalleryPage: React.FC = () => {
               opacity: 0.8,
             }}
           >
-            Take a visual tour of Brittany Estates - Explore the beauty, elegance, and craftsmanship of our luxury homes
+            Take a visual tour of Brittney Estates - Explore the beauty, elegance, and craftsmanship of our luxury homes
           </Typography>
         </Container>
       </Box>

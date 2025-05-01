@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "author": "Pebble Hill Building Corp",
-  "description": "Official website for Brittany Estates luxury homes in Northport, Long Island",
+  "description": "Official website for Brittney Estates luxury homes in Northport, Long Island",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",

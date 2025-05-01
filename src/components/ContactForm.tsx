@@ -77,7 +77,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   const sendEmail = async (formData: ContactFormData) => {
     try {
       const htmlContent = `
-        <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
         <p><strong>Email:</strong> ${formData.email}</p>
         <p><strong>Phone:</strong> ${formData.phone || 'Not provided'}</p>
@@ -93,7 +92,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         },
         body: JSON.stringify({
           to: ['1eakanmu@gmail.com'], // Change this to your email address
-          subject: `New Contact Form Submission - ${formData.interestedIn}`,
+          subject: `New Contact Form Submission`,
           templateProps: htmlContent,
         }),
       });

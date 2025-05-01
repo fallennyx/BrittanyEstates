@@ -129,7 +129,7 @@ const CommunityPage: React.FC = () => {
 
       <Section
         title="Location & Amenities"
-        subtitle="Discover all that Brittany Estates and the surrounding area has to offer"
+        subtitle="Discover all that Brittney Estates and the surrounding area has to offer"
       >
        
 
@@ -167,7 +167,7 @@ const CommunityPage: React.FC = () => {
                 Explore numerous parks, preserves, and recreational facilities nearby. From hiking trails to playgrounds and sports fields, the area offers activities for all ages and interests. Northport Park features beautiful playgrounds, walking paths, and waterfront views.
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-                Brittany Estates is located just minutes from beautiful Long Island beaches and the picturesque Northport Harbor. Enjoy swimming, boating, fishing, and stunning sunsets along the shoreline. Crab Meadow Beach is one of the area's most beautiful natural attractions.
+                Brittney Estates is located just minutes from beautiful Long Island beaches and the picturesque Northport Harbor. Enjoy swimming, boating, fishing, and stunning sunsets along the shoreline. Crab Meadow Beach is one of the area's most beautiful natural attractions.
               </Typography>
             </CardContent>
           </Card>
@@ -598,10 +598,10 @@ const CommunityPage: React.FC = () => {
 
         <Box sx={{ textAlign: 'center', mt: 8 }}>
           <Typography variant="h5" component="h3" gutterBottom sx={{ fontFamily: '"Playfair Display", serif' }}>
-            Experience Brittany Estates
+            Experience Brittney Estates
           </Typography>
           <Typography variant="body1" paragraph>
-            Ready to explore all that our community has to offer? Schedule a visit today to see why Brittany Estates is the perfect place to call home.
+            Ready to explore all that our community has to offer? Schedule a visit today to see why Brittney Estates is the perfect place to call home.
           </Typography>
           <Button
             component={RouterLink}

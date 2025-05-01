@@ -11,7 +11,7 @@ exports.handler = async (event) => {
 
     try {
         const email = await resend.emails.send({
-            from: 'Brittany Estates <onboarding@resend.dev>',
+            from: 'Brittney Estates <onboarding@resend.dev>',
             to,
             subject,
             html: templateProps,

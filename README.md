@@ -1,10 +1,10 @@
-# Brittany Estates Website
+# Brittney Estates Website
 
-This is the official website for Brittany Estates, a luxury home development in Northport, Long Island by Pebble Hill Building Corp.
+This is the official website for Brittney Estates, a luxury home development in Northport, Long Island by Pebble Hill Building Corp.
 
 ## Project Overview
 
-The Brittany Estates website is a multi-page React application built with TypeScript and Material UI. It showcases the development's luxury homes, community features, and provides information for potential homebuyers.
+The Brittney Estates website is a multi-page React application built with TypeScript and Material UI. It showcases the development's luxury homes, community features, and provides information for potential homebuyers.
 
 ## Features
 
@@ -16,13 +16,12 @@ The Brittany Estates website is a multi-page React application built with TypeSc
 
 ## Pages
 
-- **Home**: Overview of Brittany Estates with hero section and key highlights
+- **Home**: Overview of Brittney Estates with hero section and key highlights
 - **About**: Background information about the development, vision, and team
 - **Community**: Information about location, amenities, and the surrounding area
 - **Home Designs**: Details on available home models and floor plans
 - **Gallery**: High-quality images of the homes and community
 - **Testimonials**: Testimonials from homeowners
-- **Blog**: News, updates, and articles about the development and real estate
 - **Contact**: Inquiry form and contact information
 - **FAQ**: Answers to common questions
 

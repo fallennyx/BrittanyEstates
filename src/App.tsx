@@ -11,7 +11,6 @@ import CommunityPage from './pages/CommunityPage';
 import HomeDesignsPage from './pages/HomeDesignsPage';
 import GalleryPage from './pages/GalleryPage';
 import TestimonialsPage from './pages/TestimonialsPage';
-import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import FaqPage from './pages/FaqPage';
 import ArlingtonHomePage from './pages/homeDesigns/ArlingtonHomePage';
@@ -66,7 +65,6 @@ function App() {
           <Route path="/home-designs/ashley-two" element={<AshleyTwoPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
-          <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/faq" element={<FaqPage />} />
         </Routes>

@@ -8,20 +8,20 @@ import { Link as RouterLink } from 'react-router-dom';
 // Sample FAQ data
 const generalFaqs: FaqItem[] = [
   {
-    question: "What is Brittany Estates?",
-    answer: "Brittany Estates is an exclusive community of luxury homes in Northport, Long Island, developed by Pebble Hill Building Corp. It offers elegant residences designed with premium finishes and exceptional craftsmanship."
+    question: "What is Brittney Estates?",
+    answer: "Brittney Estates is an exclusive community of luxury homes in Northport, Long Island, developed by Pebble Hill Building Corp. It offers elegant residences designed with premium finishes and exceptional craftsmanship."
   },
   {
-    question: "Where is Brittany Estates located?",
-    answer: "Brittany Estates is located in Northport, Long Island, New York. The community is situated in a peaceful setting that offers privacy while still being conveniently close to local amenities."
+    question: "Where is Brittney Estates located?",
+    answer: "Brittney Estates is located in Northport, Long Island, New York. The community is situated in a peaceful setting that offers privacy while still being conveniently close to local amenities."
   },
   {
     question: "How many homes will be in the community?",
-    answer: "Brittany Estates is an intimate community with a limited number of homesites to ensure privacy and exclusivity. Please contact our sales office for the most up-to-date information on availability."
+    answer: "Brittney Estates is an intimate community with a limited number of homesites to ensure privacy and exclusivity. Please contact our sales office for the most up-to-date information on availability."
   },
   {
-    question: "Is Brittany Estates located in a good school district?",
-    answer: "Yes, Brittany Estates is located in the highly rated Northport-East Northport School District, known for its excellent academic programs, extracurricular activities, and dedicated faculty."
+    question: "Is Brittney Estates located in a good school district?",
+    answer: "Yes, Brittney Estates is located in the highly rated Northport-East Northport School District, known for its excellent academic programs, extracurricular activities, and dedicated faculty."
   }
 ];
 
@@ -31,7 +31,7 @@ const homesFaqs: FaqItem[] = [
     answer: "We offer a variety of home designs ranging from traditional to contemporary styles. Each design can be customized to meet your specific preferences and needs. Visit our Home Designs page to view our available models."
   },
   {
-    question: "What are the standard features included in Brittany Estates homes?",
+    question: "What are the standard features included in Brittney Estates homes?",
     answer: "Our homes include premium features such as gourmet kitchens with high-end appliances, luxurious master suites, hardwood flooring, custom millwork, energy-efficient systems, and smart home technology. Each home is built with exceptional attention to detail and quality craftsmanship."
   },
   {
@@ -46,7 +46,7 @@ const homesFaqs: FaqItem[] = [
 
 const buyingFaqs: FaqItem[] = [
   {
-    question: "What is the price range for homes in Brittany Estates?",
+    question: "What is the price range for homes in Brittney Estates?",
     answer: "Home prices vary depending on the model, lot size, and customizations. Please contact our sales office for current pricing information."
   },
   {
@@ -68,7 +68,7 @@ const FaqPage: React.FC = () => {
     <Layout>
       <Section
         title="Frequently Asked Questions"
-        subtitle="Find answers to common questions about Brittany Estates"
+        subtitle="Find answers to common questions about Brittney Estates"
       >
         <Box sx={{ mb: 6 }}>
           <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
