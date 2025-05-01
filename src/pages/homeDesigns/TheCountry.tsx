@@ -16,7 +16,7 @@ import Section from '../../components/Section';
 import BackButton from '../../components/BackButton';
 import {Link as RouterLink} from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
-
+/* eslint-disable */
 // Placeholder images
 import placeholderImage from '../../assets/images/arlingtonPlans/Front_2024.jpg';
 

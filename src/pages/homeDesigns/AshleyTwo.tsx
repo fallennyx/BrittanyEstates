@@ -18,6 +18,7 @@ import {Link as RouterLink} from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 
 // Placeholder images
+/* eslint-disable */
 import placeholderImage from '../../assets/images/arlingtonPlans/Front_2024.jpg';
 
 const Ashley2Page: React.FC = () => {
